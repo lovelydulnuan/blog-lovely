@@ -1,0 +1,24 @@
+<%= form_for(@article) do |f| %>
+	<div class="col-md-10 col-md-offset-1">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+				<h3>New Article</h3>
+			</div>
+			<div class="box-body">
+				<fieldset>
+					<label>Title: </label><br>
+					<%= f.text_field :title, class: 'form-control', required: true %><br>
+					<label>Body: </label><br>
+					<%= f.text_area :body, placeholder: "Place some text here", claas: 'form-control textarea', style: 'width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;', required: true %>
+				</fieldset>
+			</div>
+			<div class="box-footer">
+				<div class="pull-right">
+					<%= link_to 'Cancel', articles_path, class: 'btn btn-warning' %> &nbsp
+					&nbsp
+					&nbsp <%= f.submit 'Save Article', class: 'btn btn-primary' %>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>

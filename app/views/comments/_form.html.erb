@@ -1,0 +1,11 @@
+<div class="cold-md-10 col-md-offset-1">
+	<%= form_for ([@article, @article.comments.build]) do |f| %>
+		<fieldset>
+			<%= f.text_field :author_name, placeholder: "Commentor's Name", class: 'form-control', required: true %>
+			<br>
+			<%= f.text_area :content, placeholder: 'Add comment', class: 'form-control', required: true %>
+			<br>
+			<%= f.submit 'Post',class: 'btn btn-primary pull-right' %>
+		</fieldset>
+	<% end %>
+</div>
